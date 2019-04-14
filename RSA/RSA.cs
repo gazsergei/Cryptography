@@ -26,7 +26,7 @@ namespace RSA
         public string InputMessage { get; set; }
         public List<BigInteger> InputNumbers { get; set; }
         public List<BigInteger> Сipher { get; set; }
-        public List<BigInteger> OutputNumber { get; set; }
+        public List<BigInteger> OutputNumbers { get; set; }
         public string OutputMessage { get; set; }
 
         #endregion
@@ -49,8 +49,8 @@ namespace RSA
             InputMessage = message;
             InputNumbers = ConvertInputMessageToNumbers(message);
             Сipher = GetCipher(InputNumbers, E, N);
-            OutputNumber = GetOutputNumbers(Сipher, D, N);
-            OutputMessage = GetOutputMessage(OutputNumber);
+            OutputNumbers = GetOutputNumbers(Сipher, D, N);
+            OutputMessage = GetOutputMessage(OutputNumbers);
         }
 
         #endregion
