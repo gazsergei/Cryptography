@@ -35,8 +35,8 @@
             this.eLabel = new System.Windows.Forms.Label();
             this.xLabel = new System.Windows.Forms.Label();
             this.rLabel = new System.Windows.Forms.Label();
-            this.spTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.fnTextBox = new System.Windows.Forms.TextBox();
+            this.dTextBox = new System.Windows.Forms.TextBox();
             this.nTextBox = new System.Windows.Forms.TextBox();
             this.qTextBox = new System.Windows.Forms.TextBox();
             this.fnLabel = new System.Windows.Forms.Label();
@@ -70,6 +70,7 @@
             this.updateValueButton.TabIndex = 108;
             this.updateValueButton.Text = "Обновить P и Q";
             this.updateValueButton.UseVisualStyleBackColor = false;
+            this.updateValueButton.Click += new System.EventHandler(this.updateValueButton_Click);
             // 
             // encryptButton
             // 
@@ -83,6 +84,7 @@
             this.encryptButton.TabIndex = 107;
             this.encryptButton.Text = "Зашифровать";
             this.encryptButton.UseVisualStyleBackColor = false;
+            this.encryptButton.Click += new System.EventHandler(this.encryptButton_Click);
             // 
             // calculateButton
             // 
@@ -96,6 +98,7 @@
             this.calculateButton.TabIndex = 105;
             this.calculateButton.Text = "Рассчитать";
             this.calculateButton.UseVisualStyleBackColor = false;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // eTextBox
             // 
@@ -137,23 +140,23 @@
             this.rLabel.TabIndex = 97;
             this.rLabel.Text = "Открытый ключ:";
             // 
-            // spTextBox
+            // fnTextBox
             // 
-            this.spTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.spTextBox.Location = new System.Drawing.Point(265, 82);
-            this.spTextBox.Multiline = true;
-            this.spTextBox.Name = "spTextBox";
-            this.spTextBox.Size = new System.Drawing.Size(121, 32);
-            this.spTextBox.TabIndex = 96;
+            this.fnTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.fnTextBox.Location = new System.Drawing.Point(265, 82);
+            this.fnTextBox.Multiline = true;
+            this.fnTextBox.Name = "fnTextBox";
+            this.fnTextBox.Size = new System.Drawing.Size(121, 32);
+            this.fnTextBox.TabIndex = 96;
             // 
-            // idTextBox
+            // dTextBox
             // 
-            this.idTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.idTextBox.Location = new System.Drawing.Point(618, 36);
-            this.idTextBox.Multiline = true;
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(121, 32);
-            this.idTextBox.TabIndex = 95;
+            this.dTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dTextBox.Location = new System.Drawing.Point(618, 36);
+            this.dTextBox.Multiline = true;
+            this.dTextBox.Name = "dTextBox";
+            this.dTextBox.Size = new System.Drawing.Size(121, 32);
+            this.dTextBox.TabIndex = 95;
             // 
             // nTextBox
             // 
@@ -341,6 +344,7 @@
             this.decryptButton.TabIndex = 119;
             this.decryptButton.Text = "Расшифровать";
             this.decryptButton.UseVisualStyleBackColor = false;
+            this.decryptButton.Click += new System.EventHandler(this.decryptButton_Click);
             // 
             // MainForm
             // 
@@ -365,8 +369,8 @@
             this.Controls.Add(this.eLabel);
             this.Controls.Add(this.xLabel);
             this.Controls.Add(this.rLabel);
-            this.Controls.Add(this.spTextBox);
-            this.Controls.Add(this.idTextBox);
+            this.Controls.Add(this.fnTextBox);
+            this.Controls.Add(this.dTextBox);
             this.Controls.Add(this.nTextBox);
             this.Controls.Add(this.qTextBox);
             this.Controls.Add(this.fnLabel);
@@ -393,8 +397,8 @@
         private System.Windows.Forms.Label eLabel;
         private System.Windows.Forms.Label xLabel;
         private System.Windows.Forms.Label rLabel;
-        private System.Windows.Forms.TextBox spTextBox;
-        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox fnTextBox;
+        private System.Windows.Forms.TextBox dTextBox;
         private System.Windows.Forms.TextBox nTextBox;
         private System.Windows.Forms.TextBox qTextBox;
         private System.Windows.Forms.Label fnLabel;

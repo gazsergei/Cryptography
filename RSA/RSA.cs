@@ -25,7 +25,7 @@ namespace RSA
         public PrivateKey PrivateKey { get; set; }
         public string InputMessage { get; set; }
         public List<BigInteger> InputNumbers { get; set; }
-        public List<BigInteger> Сipher { get; set; }
+        public List<BigInteger> Cipher { get; set; }
         public List<BigInteger> OutputNumbers { get; set; }
         public string OutputMessage { get; set; }
 
@@ -33,24 +33,50 @@ namespace RSA
 
         #region Conctructors
 
-        public RSA(string message)
+        public RSA()
         {
-            if (string.IsNullOrEmpty(message))
-                throw new Exception("");
-
             P = GeneratePrimeNumber();
             Q = GeneratePrimeNumber();
+        }
+
+        #endregion
+
+        #region Public methods
+
+        public void Calculate(BigInteger p, BigInteger q)
+        {
+            P = p;
+            Q = q;
             N = GetN(P, Q);
             Fn = EilerFunction(P, Q);
             E = GetE(Fn);
             D = GetD(Fn, E);
             PublicKey = GetPublicKey(E, N);
             PrivateKey = GetPrivateKey(D, N);
+        }
+
+        public void Encrypt(string message)
+        {
             InputMessage = message;
-            InputNumbers = ConvertInputMessageToNumbers(message);
-            Сipher = GetCipher(InputNumbers, E, N);
-            OutputNumbers = GetOutputNumbers(Сipher, D, N);
+            InputNumbers = ConvertInputMessageToNumbers(InputMessage);
+            Cipher = GetCipher(InputNumbers, E, N);
+        }
+
+        public void Decrypt(List<BigInteger> cipher)
+        {
+            Cipher = cipher;
+            OutputNumbers = GetOutputNumbers(Cipher, D, N);
             OutputMessage = GetOutputMessage(OutputNumbers);
+        }
+
+        public BigInteger GeneratePrimeNumber(int maxValue = MAX_RANDOM_VALUE)
+        {
+            var arr = GeneratePrimeNumberArray(maxValue);
+            var max = arr.Count - 1;
+
+            var index = (int)GenerateRandomNumber(max);
+
+            return arr[index];
         }
 
         #endregion
@@ -71,16 +97,6 @@ namespace RSA
         private BigInteger GetN(BigInteger p, BigInteger q)
         {
             return p * q;
-        }
-
-        public BigInteger GeneratePrimeNumber(int maxValue = MAX_RANDOM_VALUE)
-        {
-            var arr = GeneratePrimeNumberArray(maxValue);
-            var max = arr.Count - 1;
-
-            var index = (int) GenerateRandomNumber(max);
-
-            return arr[index];
         }
 
         private List<BigInteger> GeneratePrimeNumberArray(BigInteger max)
@@ -285,11 +301,13 @@ namespace RSA
             foreach (var item in numbers)
                 result.Add((char)((int) 'A' + item));
 
-            return result.ToString();
+            return new string(result.ToArray());
         }
 
         #endregion
     }
+
+    #region Classes
 
     public class ResultEuclideAlgorithm
     {
@@ -327,5 +345,7 @@ namespace RSA
             D = d;
             N = n;
         }
-    }
+    } 
+
+    #endregion
 }
