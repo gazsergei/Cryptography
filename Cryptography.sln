@@ -5,6 +5,18 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSA", "RSA\RSA.csproj", "{CA447B4B-0D7D-40E1-AFF4-0864076D99EB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab2", "Lab2", "{C28CB109-335F-4979-8C80-5C66A85E2195}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab4", "Lab4", "{18AC1028-82C0-4F08-9759-1E6E0AD9E194}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab5", "Lab5", "{C73E3830-FA62-463D-8DCE-8EAC3EB95B6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GilluKiskatra", "GilluKiskatra\GilluKiskatra.csproj", "{DE92DBC2-19C4-4550-A119-321218A49DCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GilluKiskatra.Tests", "GilluKiskatra.Tests\GilluKiskatra.Tests.csproj", "{32BE9AA6-1F4D-4B1B-9115-3154D0F992C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GilluKiskatra.Forms", "GilluKiskatra.Forms\GilluKiskatra.Forms.csproj", "{C470F728-B2A7-4289-9A89-EC8160512EB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +27,27 @@ Global
 		{CA447B4B-0D7D-40E1-AFF4-0864076D99EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA447B4B-0D7D-40E1-AFF4-0864076D99EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA447B4B-0D7D-40E1-AFF4-0864076D99EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE92DBC2-19C4-4550-A119-321218A49DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE92DBC2-19C4-4550-A119-321218A49DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE92DBC2-19C4-4550-A119-321218A49DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE92DBC2-19C4-4550-A119-321218A49DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32BE9AA6-1F4D-4B1B-9115-3154D0F992C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32BE9AA6-1F4D-4B1B-9115-3154D0F992C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BE9AA6-1F4D-4B1B-9115-3154D0F992C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32BE9AA6-1F4D-4B1B-9115-3154D0F992C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C470F728-B2A7-4289-9A89-EC8160512EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C470F728-B2A7-4289-9A89-EC8160512EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C470F728-B2A7-4289-9A89-EC8160512EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C470F728-B2A7-4289-9A89-EC8160512EB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA447B4B-0D7D-40E1-AFF4-0864076D99EB} = {C28CB109-335F-4979-8C80-5C66A85E2195}
+		{DE92DBC2-19C4-4550-A119-321218A49DCE} = {18AC1028-82C0-4F08-9759-1E6E0AD9E194}
+		{32BE9AA6-1F4D-4B1B-9115-3154D0F992C4} = {18AC1028-82C0-4F08-9759-1E6E0AD9E194}
+		{C470F728-B2A7-4289-9A89-EC8160512EB0} = {18AC1028-82C0-4F08-9759-1E6E0AD9E194}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E0148EBD-6E9B-4FC1-B135-5AD46B5C179F}
