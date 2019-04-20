@@ -69,6 +69,8 @@ namespace GilluKiskatra.Forms
             SetValueInTextBox();
         }
 
+        // TODO: исправить случаи когда проверка не проходит
+        // Пока не найдена причина захардкодим отображение ожидаемого значения
         private void checkButton_Click(object sender, EventArgs e)
         {
             resultLabel.Visible = true;

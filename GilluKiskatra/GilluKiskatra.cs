@@ -298,7 +298,7 @@ namespace GilluKiskatra
         private BigInteger GenerateRandomNumber(int maxValue)
         {
             // Задержка нужна чтобы предотвратить генерацию одинаковых значений
-            Thread.Sleep(500);
+            Thread.Sleep(200);
 
             var random = new Random();
             var result = random.Next(1, maxValue + 1);
