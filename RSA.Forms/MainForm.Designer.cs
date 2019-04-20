@@ -50,12 +50,12 @@
             this.inputLabel = new System.Windows.Forms.Label();
             this.outputLabel = new System.Windows.Forms.Label();
             this.outputTextBox = new System.Windows.Forms.TextBox();
-            this.publicKeyLabel = new System.Windows.Forms.Label();
-            this.privateKeyLabel = new System.Windows.Forms.Label();
             this.inputNumbersLabel = new System.Windows.Forms.Label();
             this.cipherLabel = new System.Windows.Forms.Label();
             this.outputNumbersLabel = new System.Windows.Forms.Label();
             this.decryptButton = new System.Windows.Forms.Button();
+            this.publicKeyTextBox = new System.Windows.Forms.TextBox();
+            this.privateKeyTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // updateValueButton
@@ -247,7 +247,7 @@
             // inputTextBox
             // 
             this.inputTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.inputTextBox.Location = new System.Drawing.Point(93, 265);
+            this.inputTextBox.Location = new System.Drawing.Point(24, 265);
             this.inputTextBox.Multiline = true;
             this.inputTextBox.Name = "inputTextBox";
             this.inputTextBox.Size = new System.Drawing.Size(281, 67);
@@ -257,56 +257,36 @@
             // 
             this.inputLabel.AutoSize = true;
             this.inputLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.inputLabel.Location = new System.Drawing.Point(31, 267);
+            this.inputLabel.Location = new System.Drawing.Point(20, 238);
             this.inputLabel.Name = "inputLabel";
-            this.inputLabel.Size = new System.Drawing.Size(54, 24);
+            this.inputLabel.Size = new System.Drawing.Size(253, 24);
             this.inputLabel.TabIndex = 111;
-            this.inputLabel.Text = "input";
+            this.inputLabel.Text = "Что хотим зашифровать:";
             // 
             // outputLabel
             // 
             this.outputLabel.AutoSize = true;
             this.outputLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.outputLabel.Location = new System.Drawing.Point(20, 445);
+            this.outputLabel.Location = new System.Drawing.Point(20, 427);
             this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(67, 24);
+            this.outputLabel.Size = new System.Drawing.Size(248, 24);
             this.outputLabel.TabIndex = 113;
-            this.outputLabel.Text = "output";
+            this.outputLabel.Text = "Расшифрованный текст:";
             // 
             // outputTextBox
             // 
             this.outputTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.outputTextBox.Location = new System.Drawing.Point(88, 443);
+            this.outputTextBox.Location = new System.Drawing.Point(24, 462);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.Size = new System.Drawing.Size(281, 70);
             this.outputTextBox.TabIndex = 112;
             // 
-            // publicKeyLabel
-            // 
-            this.publicKeyLabel.AutoSize = true;
-            this.publicKeyLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.publicKeyLabel.Location = new System.Drawing.Point(268, 141);
-            this.publicKeyLabel.Name = "publicKeyLabel";
-            this.publicKeyLabel.Size = new System.Drawing.Size(151, 24);
-            this.publicKeyLabel.TabIndex = 114;
-            this.publicKeyLabel.Text = "publicKeyLabel";
-            // 
-            // privateKeyLabel
-            // 
-            this.privateKeyLabel.AutoSize = true;
-            this.privateKeyLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.privateKeyLabel.Location = new System.Drawing.Point(268, 190);
-            this.privateKeyLabel.Name = "privateKeyLabel";
-            this.privateKeyLabel.Size = new System.Drawing.Size(162, 24);
-            this.privateKeyLabel.TabIndex = 115;
-            this.privateKeyLabel.Text = "privateKeyLabel";
-            // 
             // inputNumbersLabel
             // 
             this.inputNumbersLabel.AutoSize = true;
             this.inputNumbersLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.inputNumbersLabel.Location = new System.Drawing.Point(396, 286);
+            this.inputNumbersLabel.Location = new System.Drawing.Point(311, 267);
             this.inputNumbersLabel.Name = "inputNumbersLabel";
             this.inputNumbersLabel.Size = new System.Drawing.Size(187, 24);
             this.inputNumbersLabel.TabIndex = 116;
@@ -316,7 +296,7 @@
             // 
             this.cipherLabel.AutoSize = true;
             this.cipherLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cipherLabel.Location = new System.Drawing.Point(91, 369);
+            this.cipherLabel.Location = new System.Drawing.Point(20, 369);
             this.cipherLabel.Name = "cipherLabel";
             this.cipherLabel.Size = new System.Drawing.Size(118, 24);
             this.cipherLabel.TabIndex = 117;
@@ -326,7 +306,7 @@
             // 
             this.outputNumbersLabel.AutoSize = true;
             this.outputNumbersLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.outputNumbersLabel.Location = new System.Drawing.Point(396, 462);
+            this.outputNumbersLabel.Location = new System.Drawing.Point(311, 464);
             this.outputNumbersLabel.Name = "outputNumbersLabel";
             this.outputNumbersLabel.Size = new System.Drawing.Size(200, 24);
             this.outputNumbersLabel.TabIndex = 118;
@@ -346,17 +326,35 @@
             this.decryptButton.UseVisualStyleBackColor = false;
             this.decryptButton.Click += new System.EventHandler(this.decryptButton_Click);
             // 
+            // publicKeyTextBox
+            // 
+            this.publicKeyTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.publicKeyTextBox.Location = new System.Drawing.Point(271, 136);
+            this.publicKeyTextBox.Multiline = true;
+            this.publicKeyTextBox.Name = "publicKeyTextBox";
+            this.publicKeyTextBox.Size = new System.Drawing.Size(288, 32);
+            this.publicKeyTextBox.TabIndex = 120;
+            // 
+            // privateKeyTextBox
+            // 
+            this.privateKeyTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.privateKeyTextBox.Location = new System.Drawing.Point(271, 185);
+            this.privateKeyTextBox.Multiline = true;
+            this.privateKeyTextBox.Name = "privateKeyTextBox";
+            this.privateKeyTextBox.Size = new System.Drawing.Size(288, 32);
+            this.privateKeyTextBox.TabIndex = 121;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 544);
+            this.Controls.Add(this.privateKeyTextBox);
+            this.Controls.Add(this.publicKeyTextBox);
             this.Controls.Add(this.decryptButton);
             this.Controls.Add(this.outputNumbersLabel);
             this.Controls.Add(this.cipherLabel);
             this.Controls.Add(this.inputNumbersLabel);
-            this.Controls.Add(this.privateKeyLabel);
-            this.Controls.Add(this.publicKeyLabel);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.inputLabel);
@@ -412,12 +410,12 @@
         private System.Windows.Forms.Label inputLabel;
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.TextBox outputTextBox;
-        private System.Windows.Forms.Label publicKeyLabel;
-        private System.Windows.Forms.Label privateKeyLabel;
         private System.Windows.Forms.Label inputNumbersLabel;
         private System.Windows.Forms.Label cipherLabel;
         private System.Windows.Forms.Label outputNumbersLabel;
         private System.Windows.Forms.Button decryptButton;
+        private System.Windows.Forms.TextBox publicKeyTextBox;
+        private System.Windows.Forms.TextBox privateKeyTextBox;
     }
 }
 

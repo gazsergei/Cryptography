@@ -88,7 +88,6 @@ namespace RSA
             return new PublicKey(e, n);
         }
 
-
         private PrivateKey GetPrivateKey(BigInteger d, BigInteger n)
         {
             return new PrivateKey(d, n);
@@ -263,7 +262,7 @@ namespace RSA
             var numbers = new List<BigInteger>();
 
             foreach (var item in message.ToCharArray())
-                numbers.Add((int)item - (int)'A');
+                numbers.Add((int)item);
 
             return numbers;
         }
@@ -299,7 +298,7 @@ namespace RSA
             var result = new List<char>();
 
             foreach (var item in numbers)
-                result.Add((char)((int) 'A' + item));
+                result.Add((char)item);
 
             return new string(result.ToArray());
         }
@@ -328,6 +327,11 @@ namespace RSA
         public BigInteger E { get; set; }
         public BigInteger N { get; set; }
 
+        public PublicKey()
+        {
+            
+        }
+
         public PublicKey(BigInteger e, BigInteger n)
         {
             E = e;
@@ -339,6 +343,11 @@ namespace RSA
     {
         public BigInteger D { get; set; }
         public BigInteger N { get; set; }
+
+        public PrivateKey()
+        {
+            
+        }
 
         public PrivateKey(BigInteger d, BigInteger n)
         {
