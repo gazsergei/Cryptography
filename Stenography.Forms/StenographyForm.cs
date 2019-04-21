@@ -4,7 +4,7 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace Stenography.Forms
 {
-    public partial class StenographyForm : System.Windows.Forms.Form
+    public partial class StenographyForm : Form
     {
         public StenographyForm()
         {
@@ -13,13 +13,15 @@ namespace Stenography.Forms
 
         private void StenographyForm_Load(object sender, EventArgs e)
         {
-
+            filePathTextBox.Enabled = false;
         }
 
         private void openButton_Click(object sender, EventArgs e)
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
                 filePathTextBox.Text = openFileDialog.FileName;
+            }
         }
 
         private void encryptButton_Click(object sender, EventArgs e)
@@ -30,13 +32,12 @@ namespace Stenography.Forms
                 object w = 1;
 
                 var app = new Word.Application();
-                app.Visible = true;
-                var doc = app.Documents.Open(openFileDialog.FileName);
+                app.Visible = false;
+                var doc = app.Documents.Open(filePathTextBox.Text);
 
                 var input = cipherTextBox.Text;
 
                 var i = 0;
-
                 while (true)
                 {
                     var range = doc.Range(ref positionLetter, ref w);

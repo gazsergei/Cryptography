@@ -39,9 +39,10 @@
             // 
             // encryptButton
             // 
-            this.encryptButton.Location = new System.Drawing.Point(572, 139);
+            this.encryptButton.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.encryptButton.Location = new System.Drawing.Point(561, 368);
             this.encryptButton.Name = "encryptButton";
-            this.encryptButton.Size = new System.Drawing.Size(105, 23);
+            this.encryptButton.Size = new System.Drawing.Size(198, 49);
             this.encryptButton.TabIndex = 9;
             this.encryptButton.Text = "Зашифровать";
             this.encryptButton.UseVisualStyleBackColor = true;
@@ -49,41 +50,47 @@
             // 
             // cipherTextBox
             // 
-            this.cipherTextBox.Location = new System.Drawing.Point(108, 104);
+            this.cipherTextBox.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cipherTextBox.Location = new System.Drawing.Point(214, 224);
+            this.cipherTextBox.Multiline = true;
             this.cipherTextBox.Name = "cipherTextBox";
-            this.cipherTextBox.Size = new System.Drawing.Size(112, 20);
+            this.cipherTextBox.Size = new System.Drawing.Size(545, 97);
             this.cipherTextBox.TabIndex = 7;
             // 
             // filePathTextBox
             // 
-            this.filePathTextBox.Location = new System.Drawing.Point(161, 78);
+            this.filePathTextBox.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.filePathTextBox.Location = new System.Drawing.Point(214, 36);
             this.filePathTextBox.Name = "filePathTextBox";
-            this.filePathTextBox.Size = new System.Drawing.Size(59, 20);
+            this.filePathTextBox.Size = new System.Drawing.Size(545, 32);
             this.filePathTextBox.TabIndex = 8;
             // 
             // filePathLabel
             // 
             this.filePathLabel.AutoSize = true;
-            this.filePathLabel.Location = new System.Drawing.Point(66, 81);
+            this.filePathLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.filePathLabel.Location = new System.Drawing.Point(27, 39);
             this.filePathLabel.Name = "filePathLabel";
-            this.filePathLabel.Size = new System.Drawing.Size(89, 13);
+            this.filePathLabel.Size = new System.Drawing.Size(165, 24);
             this.filePathLabel.TabIndex = 4;
             this.filePathLabel.Text = "Исходный текст";
             // 
             // cipherLabel
             // 
             this.cipherLabel.AutoSize = true;
-            this.cipherLabel.Location = new System.Drawing.Point(66, 107);
+            this.cipherLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cipherLabel.Location = new System.Drawing.Point(27, 227);
             this.cipherLabel.Name = "cipherLabel";
-            this.cipherLabel.Size = new System.Drawing.Size(36, 13);
+            this.cipherLabel.Size = new System.Drawing.Size(67, 24);
             this.cipherLabel.TabIndex = 5;
             this.cipherLabel.Text = "Шифр";
             // 
             // openButton
             // 
-            this.openButton.Location = new System.Drawing.Point(572, 113);
+            this.openButton.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.openButton.Location = new System.Drawing.Point(566, 88);
             this.openButton.Name = "openButton";
-            this.openButton.Size = new System.Drawing.Size(105, 23);
+            this.openButton.Size = new System.Drawing.Size(193, 49);
             this.openButton.TabIndex = 6;
             this.openButton.Text = "Открыть";
             this.openButton.UseVisualStyleBackColor = true;
@@ -97,13 +104,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(793, 439);
             this.Controls.Add(this.encryptButton);
             this.Controls.Add(this.cipherTextBox);
             this.Controls.Add(this.filePathTextBox);
             this.Controls.Add(this.filePathLabel);
             this.Controls.Add(this.cipherLabel);
             this.Controls.Add(this.openButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StenographyForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.StenographyForm_Load);
