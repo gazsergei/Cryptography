@@ -62,11 +62,11 @@ namespace RSA
             Cipher = GetCipher(InputNumbers, E, N);
         }
 
-        public void Decrypt(List<BigInteger> cipher)
+        public string Decrypt(List<BigInteger> cipher)
         {
             Cipher = cipher;
             OutputNumbers = GetOutputNumbers(Cipher, D, N);
-            OutputMessage = GetOutputMessage(OutputNumbers);
+            return GetOutputMessage(OutputNumbers);
         }
 
         public BigInteger GeneratePrimeNumber(int maxValue = MAX_RANDOM_VALUE)
@@ -214,9 +214,7 @@ namespace RSA
             var result = EuclideAlgorithm(fn, e);
 
             if (result.Y1 < 0)
-            {
                 return result.Y1 + fn;
-            }
 
             return result.D1;
         }
